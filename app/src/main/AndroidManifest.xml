@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.danielgola.setamy.application">
+    package="com.blackhammers.kalisz.planuz">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Welcome_Screen">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FacultiesActivity" />
+        <activity android:name=".LecturerRoomsActivity" />
+        <activity android:name=".LecturersActivity" />
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".CoursesActivity" />
+        <activity android:name=".GroupsActivity" />
+        <activity android:name=".MainMenuActivity" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".SubjectsActivity"></activity>
     </application>
 
 </manifest>
