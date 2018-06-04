@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "136779383162",
+    "firebase_url": "https://planuz-3454a.firebaseio.com",
+    "project_id": "planuz-3454a",
+    "storage_bucket": "planuz-3454a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136779383162:android:33fe5127c1d78e25",
+        "android_client_info": {
+          "package_name": "com.blackhammers.kalisz.planuz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136779383162-q588g2goo4u4a8ag731o3fkpg2m0id3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.blackhammers.kalisz.planuz",
+            "certificate_hash": "9a3f5a6e367bb05b6ffcbe5d297bc2ae4056b403"
+          }
+        },
+        {
+          "client_id": "136779383162-pjljuotgmmckuj85apaspgu4cnfrik4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyxputaPey2599bmlF-GskV-1cJ9fm5VM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136779383162-pjljuotgmmckuj85apaspgu4cnfrik4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
