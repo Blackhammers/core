@@ -59,7 +59,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
         int groupsId = intent.getIntExtra("groupsId", 0);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new SubjectsListFragment().newInstance(getMondayPlanFromFirebase(facultiesId, coursesId)), blabla);
+        adapter.addFragment(new SubjectsListFragment().newInstance(getMondayPlanFromFirebase(facultiesId, coursesId)), "PN");
         adapter.addFragment(new SubjectsListFragment().newInstance(getTuesdayPlanFromFirebase(facultiesId, coursesId, groupsId)), "WT");
         adapter.addFragment(new SubjectsListFragment().newInstance(getWednesdayPlanFromFirebase(facultiesId, coursesId)), "SR");
         adapter.addFragment(new SubjectsListFragment().newInstance(getThursdayPlanFromFirebase(facultiesId, coursesId, groupsId)), "CZ");
