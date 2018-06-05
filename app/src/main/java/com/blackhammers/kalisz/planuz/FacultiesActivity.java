@@ -125,7 +125,7 @@ public class FacultiesActivity extends AppCompatActivity implements onFacultiesA
     public void getFacultiesFromDatabase() {
 
 
-        databaseReference = firebaseDatabase.getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi");
+        databaseReference = firebaseDatabase.getReference().child("script-scraped");
         databaseReference.keepSynced(true);
 
         databaseReference.addChildEventListener(new ChildEventListener() {

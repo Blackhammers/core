@@ -98,7 +98,7 @@ public class CoursesActivity extends AppCompatActivity  implements  onCoursesAda
     }
 
     public void getCoursesFromDatabase(Integer key) {
-        databaseReference = firebaseDatabase.getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+key+"/courses");
+        databaseReference = firebaseDatabase.getReference().child("script-scraped/"+key+"/courses");
         databaseReference.keepSynced(true);
 
         databaseReference.addChildEventListener(new ChildEventListener() {

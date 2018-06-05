@@ -7,13 +7,13 @@ import java.io.Serializable;
  */
 
 public class Subjects implements Serializable {
-    String Przedmiot, Nauczyciel, Do, Od, RZ, Sale, TerminyUwagi ;
+    String Przedmiot, Nauczyciel, Do, Od, RZ, Sale, TerminyUwagi, subgroup ;
 
     public Subjects() {
     }
 
 
-    public Subjects(String przedmiot, String nauczyciel, String aDo, String od, String RZ, String sale, String terminyUwagi) {
+    public Subjects(String przedmiot, String nauczyciel, String aDo, String od, String RZ, String sale, String terminyUwagi, String subgroup) {
         Przedmiot = przedmiot;
         Nauczyciel = nauczyciel;
         Do = aDo;
@@ -21,6 +21,7 @@ public class Subjects implements Serializable {
         this.RZ = RZ;
         Sale = sale;
         TerminyUwagi = terminyUwagi;
+        this.subgroup = subgroup;
     }
 
     public String getPrzedmiot() {
@@ -77,5 +78,13 @@ public class Subjects implements Serializable {
 
     public void setTerminyUwagi(String terminyUwagi) {
         TerminyUwagi = terminyUwagi;
+    }
+
+    public String getSubgroup() {
+        return subgroup;
+    }
+
+    public void setSubgroup(String subgroup) {
+        this.subgroup = subgroup;
     }
 }

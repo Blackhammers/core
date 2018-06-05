@@ -90,7 +90,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     public List<Subjects> getMondayPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/monday");
+        databaseReference = firebaseDatabase.getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/monday");
 
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
@@ -126,7 +126,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     }
     public List<Subjects> getTuesdayPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
         final List<Subjects> subjectsList=new ArrayList<>();
-        FirebaseDatabase.getInstance().getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/tuesday").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/tuesday").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator=  dataSnapshot.getChildren().iterator();
@@ -146,7 +146,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     public List<Subjects> getWednesdayPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
         final List<Subjects> subjectsList=new ArrayList<>();
 
-        FirebaseDatabase.getInstance().getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/wednesday").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/wednesday").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator=  dataSnapshot.getChildren().iterator();
@@ -167,7 +167,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     public List<Subjects> getThursdayPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
         final List<Subjects> subjectsList=new ArrayList<>();
 
-        FirebaseDatabase.getInstance().getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/thursday").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/thursday").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator=  dataSnapshot.getChildren().iterator();
@@ -188,7 +188,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     public List<Subjects> getFridayPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
         final List<Subjects> subjectsList=new ArrayList<>();
 
-        FirebaseDatabase.getInstance().getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/friday").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/friday").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator=  dataSnapshot.getChildren().iterator();
@@ -209,7 +209,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     public List<Subjects> getSaturdayPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
         final List<Subjects> subjectsList=new ArrayList<>();
 
-        FirebaseDatabase.getInstance().getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/saturday").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/saturday").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator=  dataSnapshot.getChildren().iterator();
@@ -230,7 +230,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     public List<Subjects> getSundayPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
         final List<Subjects> subjectsList=new ArrayList<>();
 
-        FirebaseDatabase.getInstance().getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/sunday").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/sunday").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator=  dataSnapshot.getChildren().iterator();
@@ -251,7 +251,7 @@ public class SubjectsActivity extends AppCompatActivity implements onSubjectsAda
     public List<Subjects> getIrregularPlanFromFirebase(Integer facultiesKey, Integer coursesKey, Integer groupsKey){
         final List<Subjects> subjectsList=new ArrayList<>();
 
-        FirebaseDatabase.getInstance().getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/irregular").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups/"+groupsKey+"/schedule/irregular").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator=  dataSnapshot.getChildren().iterator();

@@ -100,7 +100,7 @@ public class GroupsActivity extends AppCompatActivity implements onGroupsAdapter
     }
 
     public void getGroupsFromDatabase(Integer facultiesKey, Integer coursesKey){
-        databaseReference = firebaseDatabase.getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups");
+        databaseReference = firebaseDatabase.getReference().child("script-scraped/"+facultiesKey+"/courses/"+coursesKey+"/groups");
         databaseReference.keepSynced(true);
 
         databaseReference.addChildEventListener(new ChildEventListener() {
