@@ -40,7 +40,7 @@ public class SubjectsListAdapter extends RecyclerView.Adapter<SubjectsListAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView Przedmiot, Nauczyciel, Do, Od, RZ, Sale, TerminyUwagi;
+        TextView Przedmiot, Nauczyciel, Do, Od, RZ, Sale, TerminyUwagi, subgroup;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -51,6 +51,7 @@ public class SubjectsListAdapter extends RecyclerView.Adapter<SubjectsListAdapte
             RZ = itemView.findViewById(R.id.rodzajzajecID);
             Sale = itemView.findViewById(R.id.salaID);
             TerminyUwagi = itemView.findViewById(R.id.terminyUwagiID);
+            subgroup = itemView.findViewById(R.id.subgroupID);
 
         }
         public void bindView(Subjects subjects) {
@@ -61,6 +62,7 @@ public class SubjectsListAdapter extends RecyclerView.Adapter<SubjectsListAdapte
             RZ.setText(subjects.getRZ());
             Sale.setText(subjects.getSale());
             TerminyUwagi.setText(subjects.getTerminyUwagi());
+            subgroup.setText(subjects.getSubgroup());
 
         }
     }
