@@ -43,8 +43,6 @@ public class FacultiesActivity extends AppCompatActivity implements onFacultiesA
 
         toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar_id);
         setSupportActionBar(toolbar);
-//    getSupportActionBar().setDisplayShowHomeEnabled(true);
-//    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Wydziały");
 
 
@@ -56,7 +54,6 @@ public class FacultiesActivity extends AppCompatActivity implements onFacultiesA
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayoutManager.VERTICAL));
         Context context;
-//        getSupportActionBar().setIcon(R.drawable.classicon);
 
         facultiesList = new ArrayList<>();
         keys = new ArrayList<>();
@@ -128,18 +125,15 @@ public class FacultiesActivity extends AppCompatActivity implements onFacultiesA
     public void getFacultiesFromDatabase() {
 
 
-        databaseReference = firebaseDatabase.getReference().child("data");
+        databaseReference = firebaseDatabase.getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi");
         databaseReference.keepSynced(true);
 
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Faculties faculties = dataSnapshot.getValue(Faculties.class);
-                // add data from model to arraylist
 
                 facultiesList.add(faculties);
-
-                //add arraylist to adapter/recyclerView
 
                 adapter.notifyDataSetChanged();
 

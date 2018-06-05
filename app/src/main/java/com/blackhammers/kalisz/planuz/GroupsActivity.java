@@ -63,18 +63,6 @@ public class GroupsActivity extends AppCompatActivity implements onGroupsAdapter
         firebaseDatabase = FirebaseDatabase.getInstance();
         getGroupsFromDatabase(facultiesId,coursesId);
         adapter.notifyDataSetChanged();
-
-
- //       String text = getIntent().getStringExtra("name");
-//
-//        Faculties facultiesInf = intent.getParcelableExtra("Infname");
-//        String text1 = facultiesInf.getname();
-//
-//        Faculties facultiesEko = intent.getParcelableExtra("Ekoname");
-//        String text = facultiesEko.getname();
-//
-//        textView = (TextView) findViewById(R.id.textId);
-//        textView.setText(text);
     }
 
     @Override
@@ -112,7 +100,7 @@ public class GroupsActivity extends AppCompatActivity implements onGroupsAdapter
     }
 
     public void getGroupsFromDatabase(Integer facultiesKey, Integer coursesKey){
-        databaseReference = firebaseDatabase.getReference().child("data/"+facultiesKey+"/courses/"+coursesKey+"/groups");
+        databaseReference = firebaseDatabase.getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+facultiesKey+"/courses/"+coursesKey+"/groups");
         databaseReference.keepSynced(true);
 
         databaseReference.addChildEventListener(new ChildEventListener() {
@@ -167,51 +155,20 @@ public class GroupsActivity extends AppCompatActivity implements onGroupsAdapter
         });
         adapter.notifyDataSetChanged();
 
-//        databaseReference = firebaseDatabase.getReference().child("data/"+key+"/courses/"+key+"/courses");
-//        ValueEventListener valueEventListener = new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                for(DataSnapshot ds : dataSnapshot.getChildren()){
-//                    for(DataSnapshot snap : ds.getChildren()){
-//                    if(ds.exists()){
-//                        Groups groups = snap.getValue(Groups.class);
-//                        groupsList.add(groups);
-//                        recyclerView.setAdapter(adapter);
-//                        //Log.d("Courses name ", groups.getName());
-//                    }
-//                }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        };
-//        databaseReference.addValueEventListener(valueEventListener);
-//        adapter.notifyDataSetChanged();
-//      //databaseReference = firebaseDatabase.getReference().child("data");
-//        databaseReference.addListenerForSingleValueEvent(valueEventListener);
     }
-
-
-
 
     @Override
     public void onGroupsSelectedListener(Groups groups) {
+
+        Intent intent2 = getIntent();
+        int coursesId = intent2.getIntExtra("coursesId", 0);
+        int facultiesId = intent2.getIntExtra("facultiesId", 0);
         Intent intent = new Intent(getApplicationContext(), SubjectsActivity.class);
-        int coursesId = intent.getIntExtra("coursesId", 0);
-        int facultiesId = intent.getIntExtra("facultiesId", 0);
         String blabla = "randomowy string asdasdasdasdasdasd";
         intent.putExtra("facultiesId", facultiesId );
         intent.putExtra("coursesId", coursesId);
         intent.putExtra("groupsId", groups.getId());
         intent.putExtra("random", blabla);
-//        Bundle bundle = new Bundle();
-//        bundle.putInt("facultiesId", facultiesId);
-//        bundle.putInt("coursesId", coursesId);
-//        bundle.putInt("groupsId", groups.getId());
-//        intent.putExtras(bundle);
         startActivity(intent);
     }
 }
