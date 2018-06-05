@@ -76,7 +76,6 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.SingleCo
     @Override
     public void onBindViewHolder(SingleCoursesRowHolder holder, int position) {
         final Courses courses = filterList.get(position);
-        //holder.setIsRecyclable(false);
         holder.name.setText(courses.getName());
         //Glide  for images
 

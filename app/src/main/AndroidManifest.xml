@@ -33,7 +33,6 @@
         <activity android:name=".CoursesActivity" />
         <activity android:name=".GroupsActivity" />
         <activity android:name=".MainMenuActivity" />
-        <activity android:name=".CalendarActivity" />
         <activity android:name=".SubjectsActivity"></activity>
     </application>
 

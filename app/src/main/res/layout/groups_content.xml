@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.CardView
@@ -23,7 +25,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/groupsNameId"
                 android:text="GROUP NAME"
-                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center"

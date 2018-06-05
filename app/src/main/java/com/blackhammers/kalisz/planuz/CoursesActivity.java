@@ -98,7 +98,7 @@ public class CoursesActivity extends AppCompatActivity  implements  onCoursesAda
     }
 
     public void getCoursesFromDatabase(Integer key) {
-        databaseReference = firebaseDatabase.getReference().child("data/"+key+"/courses");
+        databaseReference = firebaseDatabase.getReference().child("script-scraped/-LE6DH1z0cJZF2ZptiOi/"+key+"/courses");
         databaseReference.keepSynced(true);
 
         databaseReference.addChildEventListener(new ChildEventListener() {
@@ -152,35 +152,7 @@ public class CoursesActivity extends AppCompatActivity  implements  onCoursesAda
             }
         });
         adapter.notifyDataSetChanged();
-
-
-//        databaseReference = firebaseDatabase.getReference().child("data/"+key+"/courses");
-//
-//        ValueEventListener valueEventListener = new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                    for(DataSnapshot ds : dataSnapshot.getChildren()){
-//                    if(dataSnapshot.exists()){
-//                        Courses courses = ds.getValue(Courses.class);
-//                        coursesList.add(courses);
-//                        recyclerView.setAdapter(adapter);
-//                        Log.d("Courses name ", courses.getName());
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        };
-//        databaseReference.addValueEventListener(valueEventListener);
-//        adapter.notifyDataSetChanged();
-////        databaseReference = firebaseDatabase.getReference().child("data");
-//        databaseReference.addListenerForSingleValueEvent(valueEventListener);
     }
-
-
 
     @Override
     public void onCoursesSelectedListener(Courses courses) {

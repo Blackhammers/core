@@ -22,8 +22,8 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class SubjectsListFragment extends Fragment {
-    RecyclerView showUserList;
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+    RecyclerView recyclerView;
 
     private static final String ARG_PARAM_SUBJECTS_LIST = "subjectsList";
     private List<Subjects> subjectsList;
@@ -53,6 +53,7 @@ public class SubjectsListFragment extends Fragment {
 
         if (getArguments() != null) {
             subjectsList = (List<Subjects>) getArguments().getSerializable(ARG_PARAM_SUBJECTS_LIST);
+
         }
     }
 
@@ -66,13 +67,13 @@ public class SubjectsListFragment extends Fragment {
     }
 
     private void defineView(View view){
-        showUserList=view.findViewById(R.id.recyclerSubjectsView);
+        recyclerView =view.findViewById(R.id.recyclerSubjectsView);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        showUserList.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);
 
         SubjectsListAdapter listAdapter=new SubjectsListAdapter(subjectsList);
-        showUserList.setAdapter(listAdapter);
+        recyclerView.setAdapter(listAdapter);
     }
 
 

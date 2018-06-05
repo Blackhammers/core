@@ -115,43 +115,5 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.SingleGrou
             }
         };
     }
-
-//    @Override
-//    public Filter getFilter() {
-//        return new Filter() {
-//            @Override
-//            protected FilterResults performFiltering(CharSequence constraint) {
-//                String searchText = constraint.toString();
-//                if (searchText.isEmpty()) {
-//                    filterList = c;
-//                } else {
-//                    List<Courses> filteredList = new ArrayList<>();
-//                    for (Courses faculties : cour) {
-//                        if (faculties.name.toLowerCase().contains(searchText.toLowerCase())|| faculties.getname().toLowerCase().contains(searchText.toLowerCase())) {
-//                            filteredList.add(faculties);
-//                        }
-//                    }
-//                    filterList = filteredList;
-//                }
-//
-//                FilterResults filterResults = new FilterResults();
-//                filterResults.values = filterList;
-//                return filterResults;
-//
-//            }
-//
-//            @Override
-//            protected void publishResults(CharSequence constraint, FilterResults results) {
-//
-//                filterList = (ArrayList<Faculties>) results.values;
-//                notifyDataSetChanged();
-//
-//            }
-//        };
-//    }
-
-
-
-
 }
 

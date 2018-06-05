@@ -13,7 +13,6 @@ import java.util.Map;
 public class Faculties {
     String name, address;
     int id;
-//    public Map<String,Courses> courses;
 
     public Faculties(String name, String address,int id, Map<String, Courses> courses) {
         this.name = name;
@@ -48,11 +47,4 @@ public class Faculties {
     public void setId(int id) {
         this.id = id;
     }
-    //    public Map<String, Courses> getCourses() {
-//        return courses;
-//    }
-//
-//    public void setCourses(Map<String, Courses> courses) {
-//        this.courses = courses;
-//    }
 }
